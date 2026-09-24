@@ -149,9 +149,6 @@ body{padding:20px 0}
     <option>Loandjili</option>
   </select>
 
-  <label for="montant">Montant à encaisser (FCFA)</label>
-  <input id="montant" class="input" type="number" min="0" step="500" required>
-
   <button class="btn blue full" style="margin-top:18px">
     ENREGISTRER LE COLIS
   </button>
@@ -235,7 +232,6 @@ form.onsubmit = e => {
     nom: document.getElementById('nom').value.trim(),
     telephone: document.getElementById('tel').value.trim(),
     quartier: document.getElementById('quartier').value,
-    montant: Number(document.getElementById('montant').value) || 0,
     emplacement: emplacement,
     adresseRamassage: pickup ? adresseRamassage.value.trim() : '',
     quartierRamassage: pickup ? quartierRamassage.value : '',
